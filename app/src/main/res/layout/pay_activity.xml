@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/credit_card_view"
+        android:background="@drawable/visa_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/center_horizontal">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/center_creditcard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/chip"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/visa_label"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/visa"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Creditcard number"
+            android:textColor="#bbb7bb"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip" />
+
+        <EditText
+            android:id="@+id/card_number_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4866-1209-0092-8832"
+            android:textColor="#fff"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_number" />
+
+        <TextView
+            android:id="@+id/card_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Card Holder"
+            android:textColor="#bbb7bb"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_number_input" />
+
+        <EditText
+            android:id="@+id/card_holder_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:text="Patryk Wasik"
+            app:layout_constraintEnd_toStartOf="@+id/center_creditcard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/card_holder"
+            app:layout_constraintTop_toBottomOf="@+id/card_holder" />
+
+        <TextView
+            android:id="@+id/expiration_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Expiration Date"
+            android:textColor="#bbb7bb"
+            app:layout_constraintStart_toStartOf="@+id/expiration_date_input"
+            app:layout_constraintTop_toBottomOf="@+id/card_number_input" />
+
+        <EditText
+            android:id="@+id/expiration_date_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="January 2022"
+            android:layout_marginLeft="30dp"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/card_number_input"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/center_creditcard"
+            app:layout_constraintTop_toBottomOf="@+id/expiration_date" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.Guideline
+        android:id="@+id/center_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+    <android.support.constraint.ConstraintLayout
+        android:background="#edf3f0"
+        android:id="@+id/purchase_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/center_horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/purchase"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="30sp"
+            android:textColor="#8197d3"
+            android:textFontWeight="bold"
+            android:text="Fallout 4" />
+
+        <TextView
+            android:id="@+id/payng_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="You are paying"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/purchase" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/price_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchase_layout">
+
+        <View
+            android:id="@+id/separator_vertical"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#edf3f0"
+            app:layout_constraintBottom_toTopOf="@+id/total"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/separator_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#edf3f0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/total" />
+
+        <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:layout_marginTop="20dp"
+            android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/separator_vertical" />
+
+        <TextView
+            android:id="@+id/amount_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="33.49€"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amount"
+            android:textColor="#8197d3"
+            android:textFontWeight="bold"
+            app:layout_constraintRight_toRightOf="@+id/separator_vertical" />
+
+        <TextView
+            android:id="@+id/shipping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shipping"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/separator_vertical" />
+
+        <TextView
+            android:id="@+id/shipping_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0€"
+            android:textSize="30sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amount"
+            android:textColor="#8197d3"
+            android:textFontWeight="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/separator_vertical" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:paddingTop="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shipping_holder"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/total_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="34sp"
+            android:text="33.49€"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textFontWeight="bold"
+            android:textColor="#2de955"/>
+
+        <Button
+            android:id="@+id/make_payment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/payment_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="40dp"
+            android:paddingLeft="40dp"
+            android:textColor="#fff"
+            android:textSize="18sp"
+
+            android:text="Make Payment" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

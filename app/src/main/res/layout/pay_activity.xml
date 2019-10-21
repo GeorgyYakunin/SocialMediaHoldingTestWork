@@ -43,8 +43,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Creditcard number"
-            android:textColor="#bbb7bb"
+            android:text="@string/card_number"
+            app:fontFamily="@font/raleway"
+            android:textSize="11sp"
+            android:textColor="@color/payGray"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/chip" />
 
@@ -52,9 +54,10 @@
             android:id="@+id/card_number_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="4866-1209-0092-8832"
+            app:fontFamily="@font/raleway"
+            android:hint="@string/card_number_input_hint"
             android:textColor="#fff"
-            android:textSize="28sp"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_number" />
@@ -63,9 +66,11 @@
             android:id="@+id/card_holder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:fontFamily="@font/raleway"
             android:layout_marginTop="30dp"
-            android:text="Card Holder"
-            android:textColor="#bbb7bb"
+            android:text="@string/card_holder"
+            android:textSize="11sp"
+            android:textColor="@color/payGray"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_number_input" />
 
@@ -73,10 +78,11 @@
             android:id="@+id/card_holder_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="#fff"
             android:inputType="textCapWords"
-            android:text="Patryk Wasik"
+            app:fontFamily="@font/raleway"
+            android:hint="@string/card_holder_input"
             app:layout_constraintEnd_toStartOf="@+id/center_creditcard"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="@+id/card_holder"
@@ -86,9 +92,11 @@
             android:id="@+id/expiration_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:fontFamily="@font/raleway"
+            android:textSize="11sp"
             android:layout_marginTop="30dp"
-            android:text="Expiration Date"
-            android:textColor="#bbb7bb"
+            android:text="@string/expiration_date"
+            android:textColor="@color/payGray"
             app:layout_constraintStart_toStartOf="@+id/expiration_date_input"
             app:layout_constraintTop_toBottomOf="@+id/card_number_input" />
 
@@ -96,10 +104,11 @@
             android:id="@+id/expiration_date_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="January 2022"
+            android:hint="@string/expiration_date_input_hint"
+            app:fontFamily="@font/raleway"
             android:layout_marginLeft="30dp"
             android:textColor="#fff"
-            android:textSize="16sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/card_number_input"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="@+id/center_creditcard"
@@ -112,7 +121,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.45" />
     <android.support.constraint.ConstraintLayout
-        android:background="#edf3f0"
+        android:background="@drawable/purchase_gradient"
         android:id="@+id/purchase_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -123,23 +132,26 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:fontFamily="@font/r_bold"
             android:id="@+id/purchase"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:textColor="#8197d3"
-            android:textFontWeight="bold"
-            android:text="Fallout 4" />
+            android:textFontWeight="700"
+            android:text="@string/purchase" />
 
         <TextView
             android:id="@+id/payng_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="16sp"
-            android:text="You are paying"
+            android:textSize="14sp"
+            android:text="@string/payng_message"
             app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/payGray"
+            app:fontFamily="@font/raleway"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/purchase" />
 
@@ -158,7 +170,7 @@
             android:id="@+id/separator_vertical"
             android:layout_width="1dp"
             android:layout_height="0dp"
-            android:background="#edf3f0"
+            android:background="#ffedf3ff"
             app:layout_constraintBottom_toTopOf="@+id/total"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -169,7 +181,7 @@
             android:layout_height="1dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:background="#edf3f0"
+            android:background="#ffedf3ff"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@+id/total" />
@@ -178,33 +190,38 @@
         android:id="@+id/amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Amount"
+        android:text="@string/amount"
         android:layout_marginTop="20dp"
-            android:textSize="16sp"
+            app:fontFamily="@font/raleway"
+            android:textSize="14sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/payGray"
         app:layout_constraintRight_toRightOf="@+id/separator_vertical" />
 
         <TextView
             android:id="@+id/amount_holder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="33.49€"
-            android:textSize="24sp"
+            android:text="@string/amount_holder"
+            android:textSize="21sp"
+            app:fontFamily="@font/r_bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/amount"
-            android:textColor="#8197d3"
-            android:textFontWeight="bold"
+            android:textColor="@color/payBlu"
+            android:textFontWeight="700"
             app:layout_constraintRight_toRightOf="@+id/separator_vertical" />
 
         <TextView
             android:id="@+id/shipping"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shipping"
-            android:textSize="16sp"
+            android:text="@string/shipping"
+            android:textSize="14sp"
             android:layout_marginTop="20dp"
+            android:textColor="@color/payGray"
             app:layout_constraintRight_toRightOf="parent"
+            app:fontFamily="@font/raleway"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="@+id/separator_vertical" />
 
@@ -212,23 +229,26 @@
             android:id="@+id/shipping_holder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0€"
-            android:textSize="24sp"
+            android:text="@string/shipping_holder"
+            android:textSize="21sp"
+            app:fontFamily="@font/r_bold"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/amount"
-            android:textColor="#8197d3"
-            android:textFontWeight="bold"
+            android:textColor="@color/payBlu"
+            android:textFontWeight="700"
             app:layout_constraintLeft_toLeftOf="@+id/separator_vertical" />
 
         <TextView
             android:id="@+id/total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total"
+            android:text="@string/total"
+            app:fontFamily="@font/raleway"
             android:layout_marginTop="20dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:paddingTop="15dp"
             app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/payGray"
             app:layout_constraintTop_toBottomOf="@+id/shipping_holder"
             app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -236,13 +256,14 @@
             android:id="@+id/total_holder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="33.49€"
+            app:fontFamily="@font/r_bold"
+            android:textSize="26sp"
+            android:text="@string/total_holder"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/total"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:textFontWeight="bold"
-            android:textColor="#2de955"/>
+            android:textFontWeight="700"
+            android:textColor="@color/payGreen"/>
 
         <Button
             android:id="@+id/make_payment_button"
@@ -250,6 +271,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/payment_button"
             app:layout_constraintRight_toRightOf="parent"
+            app:fontFamily="@font/r_bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="20dp"
@@ -257,9 +279,9 @@
             android:paddingRight="40dp"
             android:paddingLeft="40dp"
             android:textColor="#fff"
-            android:textSize="16sp"
+            android:textSize="14sp"
 
-            android:text="Make Payment" />
+            android:text="@string/make_payment_button" />
 
 
     </android.support.constraint.ConstraintLayout>

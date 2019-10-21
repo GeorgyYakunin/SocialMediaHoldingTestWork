@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="payBlu">#ff7c99d6</color>
+    <color name="payGray">#ffcbd8f3</color>
+    <color name="payGreen">#ff23e04b</color>
+    <color name="purchaseBack">#ffedf3ff</color>
+    <color name="messageReceivedText">#ff7c99d6</color>
 </resources>

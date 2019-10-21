@@ -25,12 +25,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:textColor="#8197d3"
-            android:textSize="21sp"
-            android:text="John Doe"
+            android:textSize="18sp"
+            android:text="@string/name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/r_regular"/>
 
         <ImageView
             android:id="@+id/dot"
@@ -49,12 +50,14 @@
             android:id="@+id/isOnline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ONLINE"
+            android:text="@string/isOnline"
+            android:textColor="@color/payGray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:fontFamily="@font/raleway"/>
 
 
         <ImageButton
@@ -103,18 +106,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        app:fontFamily="@font/raleway">
 
         <EditText
             android:id="@+id/edittext_chatbox"
-            android:hint="Send message"
+            android:hint="@string/edittext_chatbox_hint"
             android:background="@android:color/transparent"
             android:layout_gravity="center"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:textSize="14sp"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            app:fontFamily="@font/raleway"
             android:maxLines="6"/>
 
         <ImageButton

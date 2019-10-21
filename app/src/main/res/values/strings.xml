@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">SocialMediaHoldingTestWork</string>
+    <string name="card_number">Credit card number</string>
+    <string name="card_holder">Card Holder</string>
+    <string name="card_holder_input">Patryk Wasik</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="expiration_date_input_hint">January 2022</string>
+    <string name="purchase">Fallout 4</string>
+    <string name="payng_message">You are paying</string>
+    <string name="amount">Amount</string>
+    <string name="amount_holder">33.49€</string>
+    <string name="shipping">Shipping</string>
+    <string name="shipping_holder">0€</string>
+    <string name="total">Total</string>
+    <string name="total_holder">33.49€</string>
+    <string name="make_payment_button">Make Payment</string>
+    <string name="card_number_input_hint">0000-0000-0000-0000</string>
+    <string name="name">John Doe</string>
+    <string name="isOnline">ONLINE</string>
+    <string name="edittext_chatbox_hint">Send message</string>
 </resources>

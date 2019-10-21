@@ -53,7 +53,7 @@ public class MessageActivity extends AppCompatActivity {
 
 
         mMessageRecycler = (RecyclerView) findViewById(R.id.rv_message_list);
-        mMessageRecycler.setBackgroundColor(Color.parseColor("#edf3ff"));
+        mMessageRecycler.setBackgroundColor(Color.parseColor("#ffedf3ff"));
         mMessageAdapter = new MessageListAdapter(this, messageList);
         mMessageRecycler.setLayoutManager(new LinearLayoutManager(this));
         mMessageRecycler.setAdapter(mMessageAdapter);

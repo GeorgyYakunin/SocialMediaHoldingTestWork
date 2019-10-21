@@ -1,0 +1,5 @@
+<resources>
+    <string name="text_large">32sp</string>
+    <string name="text_normal">18sp</string>
+    <string name="text_small">12sp</string>
+</resources>
